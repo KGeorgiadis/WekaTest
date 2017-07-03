@@ -1,0 +1,35 @@
+@relation Polite
+
+@attribute 'Validation data for Polite' numeric
+
+@data
+3
+3
+4
+3
+3
+3
+0
+0
+-1
+3
+3
+3
+2
+4
+3
+3
+4
+3
+4
+4
+4
+3
+4
+3
+3
+4
+4
+4
+3
+3

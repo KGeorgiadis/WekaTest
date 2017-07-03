@@ -22,7 +22,9 @@ namespace WekaTest
         {
             //BayesTest();
             //DensityBasedClusterer();
-            CreateArffFiles();
+            //CreateArffFiles();
+            //cvdTest();
+            Test();
             System.Console.ReadKey();
         }
 
@@ -59,15 +61,15 @@ namespace WekaTest
                     weka.core.Instance currentInst = insts.instance(i);
                     double predictedClass = cl.classifyInstance(currentInst);
                     test.add(currentInst);
-                    
+
                     double[] prediction = cl.distributionForInstance(currentInst);
 
                     for (int x = 0; x < prediction.Length; x++)
                     {
-                        System.Console.WriteLine("Probability of class [{0}] for [{1}] is: {2}", currentInst.classAttribute().value(x), currentInst, Math.Round(prediction[x],4));
+                        System.Console.WriteLine("Probability of class [{0}] for [{1}] is: {2}", currentInst.classAttribute().value(x), currentInst, Math.Round(prediction[x], 4));
                     }
                     System.Console.WriteLine();
-                    
+
                     if (predictedClass == insts.instance(i).classValue())
                         numCorrect++;
                 }
@@ -120,14 +122,14 @@ namespace WekaTest
 
         }
 
-        public static void DensityBasedClusterer ()
+        public static void DensityBasedClusterer()
         {
             try
             {
                 Instances data = new Instances(new java.io.FileReader("politeness.arff"));
 
                 MakeDensityBasedClusterer clusterer = new MakeDensityBasedClusterer();
-               
+
                 // set further options for EM, if necessary...                
                 clusterer.setNumClusters(3);
                 clusterer.buildClusterer(data);
@@ -283,7 +285,7 @@ namespace WekaTest
             data.setClassIndex(data.numAttributes() - 1);
 
             // 4. output data
-            for (int x=0; x<data.numInstances(); x++)
+            for (int x = 0; x < data.numInstances(); x++)
             {
                 weka.core.Instance ins = data.instance(x);
                 System.Console.WriteLine(ins.value(x).ToString());
@@ -292,6 +294,199 @@ namespace WekaTest
 
 
             return;
+        }
+
+        public static void cvdTest()
+        {
+
+            weka.core.Instances data = new weka.core.Instances(new java.io.FileReader("./data/Classification/Communication.arff"));
+            data.setClassIndex(data.numAttributes() - 1);
+
+            weka.classifiers.Classifier cls = new weka.classifiers.bayes.NaiveBayes();
+
+            //Save BayesNet results in .txt file
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("./data/Classification/Communication_Report.txt"))
+            {
+                int runs = 1;
+                int folds = 10;
+
+                // perform cross-validation
+                for (int i = 0; i < runs; i++)
+                {
+                    // randomize data
+                    int seed = i + 1;
+                    java.util.Random rand = new java.util.Random(seed);
+                    weka.core.Instances randData = new weka.core.Instances(data);
+                    randData.randomize(rand);
+                    if (randData.classAttribute().isNominal())
+                        randData.stratify(folds);
+
+                    weka.classifiers.Evaluation eval = new weka.classifiers.Evaluation(randData);
+                    for (int n = 0; n < folds; n++)
+                    {
+                        weka.core.Instances train = randData.trainCV(folds, n);
+                        weka.core.Instances test = randData.testCV(folds, n);
+                        // build and evaluate classifier
+                        //weka.classifiers.Classifier clsCopy = weka.classifiers.Classifier.makeCopy(cls);
+                        cls.buildClassifier(train);
+                        //eval.evaluateModel(cls, test);                
+
+                        //Print classifier analytics for all the dataset
+                        file.WriteLine("EVALUATION OF TEST DATASET.");
+                        // Test the model
+                        weka.classifiers.Evaluation eTest = new weka.classifiers.Evaluation(test);
+                        eTest.evaluateModel(cls, test);
+
+                        // Print the results as in Weka explorer:
+                        //Print statistics
+                        String strSummaryTest = eTest.toSummaryString();
+
+                        file.WriteLine(strSummaryTest);
+                        file.WriteLine();
+
+                        //Print detailed class statistics
+                        file.WriteLine(eTest.toClassDetailsString());
+                        file.WriteLine();
+
+                        //Print confusion matrix
+                        file.WriteLine(eTest.toMatrixString());
+                        file.WriteLine();
+
+                        // Get the confusion matrix
+                        double[][] cmMatrixTest = eTest.confusionMatrix();
+
+                        System.Console.WriteLine("Bayesian Network results saved in Communication_Report.txt file successfully.");
+                    }
+
+                    //Print classifier analytics for all the dataset
+                    file.WriteLine("EVALUATION OF ALL DATASET.");
+
+                    cls.buildClassifier(data);
+
+                    // Train the model
+                    weka.classifiers.Evaluation eAlldata = new weka.classifiers.Evaluation(data);
+                    eAlldata.evaluateModel(cls, data);
+
+                    // Print the results as in Weka explorer:
+                    //Print statistics
+                    String strSummaryAlldata = eAlldata.toSummaryString();
+                    file.WriteLine(strSummaryAlldata);
+                    file.WriteLine();
+
+                    //Print detailed class statistics
+                    file.WriteLine(eAlldata.toClassDetailsString());
+                    file.WriteLine();
+
+                    //Print confusion matrix
+                    file.WriteLine(eAlldata.toMatrixString());
+                    file.WriteLine("----------------");
+
+                    //print model
+                    file.WriteLine(cls);
+                    file.WriteLine();
+
+                }
+            }
+        }
+
+        public static void Test()
+        {
+
+            weka.core.Instances data = new weka.core.Instances(new java.io.FileReader("./data/Classification/Communication.arff"));
+            data.setClassIndex(data.numAttributes()-1);
+
+            weka.classifiers.Classifier cls = new weka.classifiers.bayes.BayesNet();
+            
+
+            //Save BayesNet results in .txt file
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("./data/Classification/Communication_Report.txt"))
+            {
+                file.WriteLine("Performing " + percentSplit + "% split evaluation.");
+
+                int runs = 1;
+
+                // perform cross-validation
+                for (int i = 0; i < runs; i++)
+                {
+                    // randomize data
+                    int seed = i + 1;
+                    java.util.Random rand = new java.util.Random(seed);
+                    weka.core.Instances randData = new weka.core.Instances(data);
+                    randData.randomize(rand);
+
+                    //weka.classifiers.Evaluation eval = new weka.classifiers.Evaluation(randData);
+
+                    int trainSize = (int)Math.Round((double)data.numInstances() * percentSplit / 100);
+                    int testSize = data.numInstances() - trainSize;
+                    weka.core.Instances train = new weka.core.Instances(data, 0, 0);
+                    weka.core.Instances test = new weka.core.Instances(data, 0, 0);
+                    train.setClassIndex(train.numAttributes() - 1);
+                    test.setClassIndex(test.numAttributes() - 1);
+
+                    //Print classifier analytics for all the dataset
+                    file.WriteLine("EVALUATION OF TEST DATASET.");
+
+                    //int numCorrect = 0;
+                    for (int j = 0; j < data.numInstances(); j++)
+                    {
+
+                        weka.core.Instance currentInst = randData.instance(j);
+
+                        if (j<trainSize)
+                        {
+                            train.add(currentInst);
+                        }
+
+                        else
+                        {
+                            test.add(currentInst);
+                            /*
+                            double predictedClass = cls.classifyInstance(currentInst);
+
+                            double[] prediction = cls.distributionForInstance(currentInst);
+
+                            for (int p = 0; p < prediction.Length; p++)
+                            {
+                                file.WriteLine("Probability of class [{0}] for [{1}] is: {2}", currentInst.classAttribute().value(p), currentInst, Math.Round(prediction[p], 4));
+                            }
+                            file.WriteLine();
+
+                            file.WriteLine();
+                            if (predictedClass == data.instance(j).classValue())
+                                numCorrect++;*/
+                        }
+
+                    }
+
+                    // build and evaluate classifier
+                    cls.buildClassifier(train);
+
+                    // Test the model
+                    weka.classifiers.Evaluation eval = new weka.classifiers.Evaluation(randData);
+                    eval.evaluateModel(cls, test);
+
+                    // Print the results as in Weka explorer:
+                    //Print statistics
+                    String strSummaryTest = eval.toSummaryString();
+
+                    file.WriteLine(strSummaryTest);
+                    file.WriteLine();
+
+                    //Print detailed class statistics
+                    file.WriteLine(eval.toClassDetailsString());
+                    file.WriteLine();
+
+                    //Print confusion matrix
+                    file.WriteLine(eval.toMatrixString());
+                    file.WriteLine();
+
+                    // Get the confusion matrix
+                    double[][] cmMatrixTest = eval.confusionMatrix();
+
+                    System.Console.WriteLine("Bayesian Network results saved in Communication_Report.txt file successfully.");
+
+                }
+            }
         }
 
     }

@@ -1,0 +1,41 @@
+@relation Communication
+
+@attribute 'Clustering for Closing' {Low,Medium,High}
+@attribute 'Clustering for Empathy' {Low,Medium,High}
+@attribute 'Clustering for Find in DB' {Low,Medium,High}
+@attribute 'Clustering for Inquire' {Low,Medium,High}
+@attribute 'Clustering for Polite' {Low,Medium,High}
+@attribute 'Queried game traces' {S-OP-N:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-R:S-ASKTP1-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-R:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-REROUTE:S-CLOSE-P,S-OP-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,S-OP-N:S-ASKPR-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,S-OP-P:S-DLANG-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,S-OP-P:S-ASKPR-P:S-LKUP:S-ENDGB-P}
+@attribute 'Clustering for Communication' {Low,Medium,High}
+
+@data
+High,High,Low,Medium,Medium,S-OP-N:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,High,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,Low,Medium,Low,S-OP-P:S-ASKPR-R:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,Medium,Low,S-OP-P:S-ASKPR-R:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Low,Low,S-OP-P:S-ASKPR-R:S-LKUP:S-CLOSE-P,Low
+High,High,Low,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-REROUTE:S-CLOSE-P,Low
+High,High,Low,Low,Medium,S-OP-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Low,High,S-OP-N:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,High,High,High,S-OP-P:S-DLANG-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,High,High,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,High,High,Medium,S-OP-P:S-ASKTP1-P:S-ASKDET-P:S-LKUP:S-CLOSE-P,High
+High,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,High,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Medium
+High,High,Low,Medium,High,S-OP-P:S-ASKPR-P:S-ASKTP1-P:S-LKUP:S-CLOSE-P,Low
+High,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-CLOSE-P,Low
+Low,High,Low,Low,Medium,S-OP-P:S-ASKPR-P:S-LKUP:S-ENDGB-P,Low

@@ -1,0 +1,274 @@
+Instance no: 1
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-N S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 2
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 3
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 4
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 5
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 6
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 7
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKPR-R S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-R S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 8
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKPR-R S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-R S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 9
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKPR-R S-LKUP 
+Polite:S-OP-P S-ASKPR-R S-CLOSE-P 
+
+Instance no: 10
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:S-REROUTE 
+Inquire:S-ASKTP1-P S-ASKDET-P 
+Polite:S-OP-P S-ASKTP1-P S-REROUTE S-CLOSE-P 
+
+Instance no: 11
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 12
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 13
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-N S-ASKPR-P S-CLOSE-P 
+
+Instance no: 14
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 15
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 16
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 17
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 18
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 19
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-DLANG-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 20
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 21
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 22
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 23
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 24
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-ASKDET-P S-LKUP 
+Polite:S-OP-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 25
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 26
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 27
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 28
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-ASKTP1-P S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ASKTP1-P S-CLOSE-P 
+
+Instance no: 29
+Communication:
+Closing:S-CLOSE-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-CLOSE-P 
+
+Instance no: 30
+Communication:
+Closing:S-ENDGB-P 
+Empathy:? 
+Find in DB:? 
+Inquire:S-LKUP 
+Polite:S-OP-P S-ASKPR-P S-ENDGB-P 
+
+No. of incomplete datasets: 30
+
+Exceeding data for instance 1 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSE-HRDRES5 Closure 
+Exceeding data for instance 2 is: Start FirstResponse InquireFurther FaqResponse S-DSE-LOWST5 Closure 
+Exceeding data for instance 3 is: Start FirstResponse InquireFurther AskDetails DataCollected FaqResponse S-DSP-CORCO Closure 
+Exceeding data for instance 4 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSE-HULL Closure 
+Exceeding data for instance 5 is: Start FirstResponse InquireFurther FaqResponse S-DSE-HOTRES5 Closure 
+Exceeding data for instance 6 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSS-CLEAN Closure 
+Exceeding data for instance 7 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-HEAT Closure 
+Exceeding data for instance 8 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-CLEAN Closure 
+Exceeding data for instance 9 is: Start FirstResponse InquireFurther FaqResponse S-DSE-PROXST5 Closure 
+Exceeding data for instance 10 is: Start FirstResponse AskProblem2 DataCollected Closure 
+Exceeding data for instance 11 is: Start FirstResponse AskProblem2 FaqResponse S-DSP-OVERL Closure 
+Exceeding data for instance 12 is: Start FirstResponse InquireFurther FaqResponse S-DSE-MAINT Closure 
+Exceeding data for instance 13 is: Start FirstResponse InquireFurther FaqResponse S-DSS-RECAL Closure 
+Exceeding data for instance 14 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSP-HSCLS Closure 
+Exceeding data for instance 15 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSP-HSWIP Closure 
+Exceeding data for instance 16 is: Start FirstResponse InquireFurther FaqResponse S-DSE-RECAL Closure 
+Exceeding data for instance 17 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-UPGR Closure 
+Exceeding data for instance 18 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSS-CLEAN Closure 
+Exceeding data for instance 19 is: Start FirstResponse AskProblem1 AskProblem2 DataCollected FaqResponse S-DSP-THPST Closure 
+Exceeding data for instance 20 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSE-SNINC Closure 
+Exceeding data for instance 21 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-CLEAN Closure 
+Exceeding data for instance 22 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSP-REPL Closure 
+Exceeding data for instance 23 is: Start FirstResponse InquireFurther AskDetails DataCollected FaqResponse S-DSP-REPL Closure 
+Exceeding data for instance 24 is: Start FirstResponse AskProblem2 DataCollected FaqResponse S-DSS-BOOT Closure 
+Exceeding data for instance 25 is: Start FirstResponse InquireFurther FaqResponse S-DSE-NOSL Closure 
+Exceeding data for instance 26 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSP-HUM Closure 
+Exceeding data for instance 27 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-COLD Closure 
+Exceeding data for instance 28 is: Start FirstResponse InquireFurther AskDetails FaqResponse S-DSS-BOOT Closure 
+Exceeding data for instance 29 is: Start FirstResponse InquireFurther FaqResponse S-DSE-MGMT Closure 
+Exceeding data for instance 30 is: Start FirstResponse InquireFurther FaqResponse S-DSS-FAST Closure 
+
+Non-used indicators: [1]Start [2]FirstResponse [3]InquireFurther [4]AskDetails [5]FaqResponse [6]S-DSE-HRDRES5 [7]Closure [8]S-DSE-LOWST5 [9]DataCollected [10]S-DSP-CORCO [11]AskProblem2 [12]S-DSE-HULL [13]S-DSE-HOTRES5 [14]S-DSS-CLEAN [15]S-DSS-HEAT [16]S-DSE-PROXST5 [17]S-DSP-OVERL [18]S-DSE-MAINT [19]S-DSS-RECAL [20]S-DSP-HSCLS [21]S-DSP-HSWIP [22]S-DSE-RECAL [23]S-DSS-UPGR [24]AskProblem1 [25]S-DSP-THPST [26]S-DSE-SNINC [27]S-DSP-REPL [28]S-DSS-BOOT [29]S-DSE-NOSL [30]S-DSP-HUM [31]S-DSS-COLD [32]S-DSE-MGMT [33]S-DSS-FAST 

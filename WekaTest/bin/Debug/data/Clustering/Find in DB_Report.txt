@@ -1,0 +1,170 @@
+Clusterer for Find in DB
+
+MakeDensityBasedClusterer:
+
+Wrapped clusterer:
+kMeans
+======
+
+Number of iterations: 2
+Within cluster sum of squared errors: 0.0
+
+Initial starting points (random):
+
+Cluster 0: 3
+Cluster 1: -1
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+Cluster#
+Attribute                         Full Data          0          1
+(30.0)     (10.0)     (20.0)
+=================================================================
+Validation data for Find in DB       0.3333          3         -1
+
+
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.3438
+
+Attribute: Validation data for Find in DB
+Normal Distribution. Mean = 3 StdDev = 1.9179
+
+Cluster: 1 Prior probability: 0.6563
+
+Attribute: Validation data for Find in DB
+Normal Distribution. Mean = -1 StdDev = 1.9179
+Clustered Instances
+
+0      10 ( 33%)
+1      20 ( 67%)
+
+
+Log likelihood: -2.10293
+
+
+Cluster [0] is classified as High
+Cluster [1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [3] is: 0,8218
+Prior probability of cluster [1] for instance [3] is: 0,1782
+Instance [3] is classified as High
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
+Prior probability of cluster [0] for instance [-1] is: 0,0562
+Prior probability of cluster [1] for instance [-1] is: 0,9438
+Instance [-1] is classified as Low
+
